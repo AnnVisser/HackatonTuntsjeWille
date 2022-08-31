@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hackaton Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Pacifico|Indie Flower"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header">
+          <div class="websitetitle">TûntsjeWille</div>
+          <div class="slogan">Gardening for the fun of it!</div>
+        </div>
+      </header>
+      <nav>
+        <a href="./index.html">
+          <span class="material-symbols-outlined">Home</span>
+        </a>
+        <a href="./about.html">About us</a>
+        <a href="./webshop.html">Products</a>
+        <a href="./contact.html"
+          ><span class="material-symbols-outlined"> contact_support </span></a
+        >
+      </nav>
+      <main class="contactbox">
+        <article>
+          <h3>Contact us</h3>
+          If you want to place an order or have something to ask or share with
+          us? Feel free to use the form below and send us a message.
+        </article>
+        <article>
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            class="contact"
+          >
+            <div id="formname">
+              <label for="name"><b>Your name:</b></label
+              ><br />(required)<br />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Please use real name"
+                required
+              /><br />
+            </div>
+            <div id="formemail">
+              <label for="email"><b>Your email:</b></label
+              ><br />(required)<br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@adress.com"
+                required
+              />
+            </div>
+
+            <div id="formreason">
+              <label for="reason"
+                ><b>What is the reason for your message?</b></label
+              ><br />
+              <input
+                type="radio"
+                id="question"
+                value="question"
+                name="reason"
+              /><label for="question">I have a question</label><br />
+              <input
+                type="radio"
+                id="review"
+                value="review"
+                name="reason"
+              /><label for="review">I have a review</label><br />
+              <input
+                type="radio"
+                id="order"
+                value="order"
+                name="reason"
+              /><label for="order">I want to place an order</label><br />
+              <input
+                type="radio"
+                id="feedback"
+                value="feedback"
+                name="reason"
+              /><label for="feedback">I have feedback</label><br />
+            </div>
+
+            <div id="formtel">
+              <label for="tel">
+                <b>Your telephone number:</b> <br />(only if you are
+                ordering)</label
+              ><br />
+              <input type="tel" id="telnr" name="telnr" />
+            </div>
+
+            <div id="formadress">
+              <label for="adress"
+                ><b>Your address:</b><br />
+                (only if you are ordering)</label
+              ><br />
+              <input type="text" id="address" name="address" />
+            </div>
+
+            <div id="formcontent">
+              <label for="content"
+                ><b>What do you want to order/say/ask?</b></label
+              ><br />
+              <textarea
+                rows="20"
+                cols="50"
+                name="content"
+                id="content"
+              ></textarea>
+            </div>
+            <div id="formconsent">
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                value="consent"
+                required
+              />
+              <label for="consent">
+                I am aware of the fact that if I am ordering a product, someone
+                could have ordered the last one just before me and thus
+                resulting in cancellation of that specific part of my
+                order.</label
+              >
+            </div>
+            <div id="formsubmit">
+              <input type="submit" />
+            </div>
+          </form>
+        </article>
+      </main>
+      <footer>copyright @Fam. Visser 2022</footer>
+    </div>
+  </body>
+</html>

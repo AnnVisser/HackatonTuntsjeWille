@@ -1,0 +1,365 @@
+/*basic overall stuff*/
+body {
+  background-image: url(./images/background1.jpg);
+  height: 100vh;
+  width: 100%;
+  color: white;
+  text-shadow: 10px;
+  background-color: black;
+  font-size: 16px;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px 50px 1fr 30px;
+  grid-template-areas:
+    "h"
+    "n"
+    "m"
+    "f";
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: underline;
+}
+
+/*Header stuff*/
+header {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  font-size: 2em;
+  grid-area: h;
+  background-color: transparent;
+  padding: 20px;
+  font-family: indie flower, pacifico, sans-serif;
+}
+
+.header {
+  color: white;
+  text-shadow: 40px black;
+  border: 0px solid white;
+  border-radius: 25px;
+}
+
+.websitetitle {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.slogan {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+/*menu stuff*/
+nav {
+  display: flex;
+  grid-area: n;
+  background-color: rgba(255, 255, 255, 0.349);
+  justify-content: center;
+  padding: 0px 15px 0px 15px;
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+  margin: 3px;
+  background-color: black;
+  border-style: 0px solid white;
+  border-radius: 25px;
+}
+
+.material-symbols-outlined {
+  color: white;
+}
+
+/*main stuff*/
+main {
+  grid-area: m;
+  background-color: transparent;
+}
+
+.textbox {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  border: 0px solid black;
+  border-radius: 25px;
+  box-shadow: 10px 10px 20px rgb(99, 98, 98);
+}
+
+.textbox .small-boxes {
+  display: grid;
+  padding: 5px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "r1 r2"
+    "r3 r4";
+}
+
+.small-box {
+  background-color: rgba(0, 0, 0, 0.466);
+  font-size: small;
+  border: 0px solid black;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 10px 10px 20px grey;
+}
+
+#review1 {
+  grid-area: r1;
+}
+
+#review2 {
+  grid-area: r2;
+}
+
+#review3 {
+  grid-area: r3;
+}
+
+#review4 {
+  grid-area: r4;
+}
+form {
+  font-size: small;
+}
+
+.picturebox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 25px;
+  border: 0px solid black;
+  border-radius: 25px;
+  box-shadow: 10px 10px 20px rgb(99, 98, 98);
+}
+
+.small-picturebox {
+  background-color: white;
+  height: auto;
+  margin: 3px;
+  padding: 3px;
+  border: 0px solid black;
+  border-radius: 25px;
+  box-shadow: 10px 10px 20px rgb(99, 98, 98);
+}
+
+.picturebox img {
+  max-width: 100%;
+  height: auto;
+  border: 0px solid black;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+figcaption {
+  color: black;
+  font-size: small;
+}
+
+.contactbox {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 10px 30px 10px 30px;
+  border: 0px solid black;
+  border-radius: 25px;
+  box-shadow: 10px 10px 20px rgb(99, 98, 98);
+}
+
+.contactbox div {
+  padding: 10px;
+}
+
+ul {
+  padding: 15px;
+  margin: 0px;
+}
+
+/*footer stuff*/
+footer {
+  color: black;
+  font-size: small;
+  grid-area: f;
+  background-color: white;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/*TABLET VERSION*/
+@media (min-width: 768px) {
+  body {
+    background-size: 70%;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    grid-template-rows: 240px 50px 1fr 30px;
+  }
+
+  header {
+    font-size: 4em;
+  }
+
+  nav {
+    font-size: 1.2em;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1 fr 1 fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "home home home reviews"
+      "links links links reviews";
+  }
+
+  #home {
+    grid-area: home;
+  }
+
+  #homelinks {
+    grid-area: links;
+  }
+
+  #homereviews {
+    grid-area: reviews;
+  }
+
+  .textbox .small-boxes {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "r1"
+      "r2"
+      "r3"
+      "r4";
+  }
+
+  .small-box {
+    width: 170px;
+    background-color: rgb(198, 201, 204);
+    font-size: small;
+    border: 0px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 10px 10px 20px grey;
+  }
+
+  .picturebox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 10px;
+  }
+
+  .small-picturebox {
+    width: 210px;
+    height: auto;
+  }
+
+  .contact {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: 60px 100px 60px 325px 75px 25px;
+    grid-template-areas:
+      "fname femail"
+      "freason freason"
+      "ftel faddress"
+      "fcontent fcontent"
+      "fconsent fconsent"
+      "fsubmit fsubmit";
+    margin: 16px;
+  }
+
+  #formname {
+    grid-area: fname;
+  }
+
+  #formemail {
+    grid-area: femail;
+  }
+
+  #formreason {
+    grid-area: freason;
+  }
+
+  #formtel {
+    grid-area: ftel;
+  }
+
+  #formaddress {
+    grid-area: faddress;
+  }
+
+  #formcontent {
+    grid-area: fcontent;
+  }
+
+  #formconsent {
+    grid-area: fconsent;
+  }
+
+  #formsubmit {
+    grid-area: fsubmit;
+  }
+}
+
+/*DESKTOP VERSION*/
+@media (min-width: 1024px) {
+  body {
+    background-size: 70%;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    grid-template-rows: 400px 50px 1fr 30px;
+  }
+
+  header {
+    font-size: 6em;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .picturebox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
